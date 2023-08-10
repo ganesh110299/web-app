@@ -20,7 +20,7 @@ node {
   
     stage('deploy') {
       def resourceGroup = 'deepa'
-      def webAppName = '93f33571-550f-43cf-b09f-cd331338d086'
+      def webAppName = 'samplewebapp10aug'
       // login Azure
       withCredentials([usernamePassword(credentialsId: 'AzureServicePrincipal', passwordVariable: 'AZURE_CLIENT_SECRET', usernameVariable: 'AZURE_CLIENT_ID')]) {
        sh '''
