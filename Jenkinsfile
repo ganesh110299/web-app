@@ -33,7 +33,7 @@ node {
       def pubProfilesJson = sh script: "az webapp deployment list-publishing-profiles --name $webAppName --resource-group $resourceGroup --subscription $AZURE_SUBSCRIPTION_ID", returnStdout: true
       def ftpProfile = getFtpPublishProfile pubProfilesJson
       // upload package
-      sh "curl -T index.html $ftpProfile.url/webapps/ROOT.war -u '$ftpProfile.username:$ftpProfile.password'"
+      sh "curl -T index.html ftps://waws-prod-blu-383.ftp.azurewebsites.windows.net/site/wwwroot/webapps/ROOT.war -u 'samplewebapp10aug\$samplewebapp10aug:psX3NCJRwfCc97QWqqvzR8irhWBfsHxSm4TRHQJ76xSzy2F4RD5Zv33eJatG'"
       // log out
       sh 'az logout'
     }
